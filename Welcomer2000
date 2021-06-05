@@ -38,7 +38,7 @@ static int precio;
 		System.out.println("Si quieres adquirirlo, te dejamos su número de serie y el precio:");
 		robot.numeroSerie();
 		robot.precio();
-		System.out.println("**************¡HASTA OTRA!***************");
+		System.out.println("**************¡HASTA OTRA!****************");
 		
 		
 	}
