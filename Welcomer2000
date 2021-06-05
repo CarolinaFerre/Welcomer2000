@@ -1,0 +1,46 @@
+package metodosverano;
+import java.util.Scanner;
+public class Welcomer2000 {
+	static Scanner sc=new Scanner(System.in);
+static String nombre;
+static int numeroserie;
+static int precio;
+
+	public Welcomer2000(String nombre, int numeroserie, int precio) {
+		// Constructor de robot
+		 
+		this.nombre=nombre;
+		this.numeroserie=numeroserie;
+		this.precio=precio;
+		}
+	public void demostracionUso(int personas,String saludo) {
+		for(int i=1;i<=personas;i++) {
+			System.out.println(saludo);
+			}
+		}
+	public void numeroSerie() {
+		System.out.println("Número de serie= "+this.numeroserie);
+	}
+	public void precio() {
+		System.out.println("Precio= "+this.precio+ " €");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String saludo="Welcome";
+		Welcomer2000 robot=new Welcomer2000("WELCOMER 2000",5643562,80000);
+		System.out.println("*************BIENVENIDO A LA DEMOSTRACIÓN DEL ROBOT "+robot.nombre+ "*********************");
+		System.out.println("Por favor, indica el número de personas que van a saludar a "+robot.nombre);
+		int personas=sc.nextInt();
+		System.out.println("Nuestro robot dará la bienvenida al número de personas que se elijan");
+		robot.demostracionUso(personas, saludo);
+		System.out.println("Finalizada la demostración del robot "+robot.nombre);
+		System.out.println("Si quieres adquirirlo, te dejamos su número de serie y el precio:");
+		robot.numeroSerie();
+		robot.precio();
+		System.out.println("**************¡HASTA OTRA!***************");
+		
+		
+	}
+
+}
